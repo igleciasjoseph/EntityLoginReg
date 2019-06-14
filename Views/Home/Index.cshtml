@@ -1,0 +1,48 @@
+﻿@model RegUser
+<nav class="navbar navbar-fluid navbar-expand-lg navbar-dark bg-dark mb-5">
+    <a class="navbar-brand ml-5 lead" href="#"><big>Register Below</big></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/loginpage">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row text-center d-flex justify-content-center">
+        <div class="col-6">
+            <div class="card bg-transparent text-dark border-secondary p-3">
+                <h1 class="display-4 mb-5">Register</h1>
+                <form action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="Fname">First name:</label>
+                        <input type="text" class="form-control" id="Fname" name="Fname">
+                        <span asp-validation-for="Fname"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Lname">Last name:</label>
+                        <input type="text" class="form-control" id="Lname" name="Lname">
+                        <span asp-validation-for="Lname"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input type="email" class="form-control" id="Email" name="Email">
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password:</label>
+                        <input type="Password" class="form-control" id="Password" name="Password">
+                        <span asp-validation-for="Password"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cPassword">Confirm password:</label>
+                        <input type="password" class="form-control" id="cPassword" name="cPassword">
+                        <span asp-validation-for="cPassword"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
